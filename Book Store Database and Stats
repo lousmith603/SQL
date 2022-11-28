@@ -1,0 +1,29 @@
+CREATE TABLE bluebell_books (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, genre TEXT, price INTEGER);
+
+INSERT INTO bluebell_books VALUES (1, "Crescent City", 15, "fantasy", 25);
+INSERT INTO bluebell_books VALUES (2, "Crescent City 2", 10, "fantasy", 22);
+INSERT INTO bluebell_books VALUES (3, "ACOTAR", 8, "fantasy", 16);
+INSERT INTO bluebell_books VALUES (4, "ACOMAF", 12, "fantasy", 16);
+INSERT INTO bluebell_books VALUES (5, "ACOWAR", 5, "fantasy", 14);
+INSERT INTO bluebell_books VALUES (6, "ACOFAS", 2, "fantasy",10);
+INSERT INTO bluebell_books VALUES (7, "ACOSF", 20, "fantasy", 18);
+INSERT INTO bluebell_books VALUES (8, "ACOTAR BOX SET", 3, "fantasy", 56);
+INSERT INTO bluebell_books VALUES (9, "It Happened One Summer", 4, "romance", 14);
+INSERT INTO bluebell_books VALUES (10, "Hook, Line & Sinker", 6, "romance", 14);
+INSERT INTO bluebell_books VALUES (11, "Window Shopping", 1, "romance", 10);
+INSERT INTO bluebell_books VALUES (12, "Archer's Voice", 11, "romance", 12);
+INSERT INTO bluebell_books VALUES (13, "Murder She Wrote", 13, "mystery", 8);
+INSERT INTO bluebell_books VALUES (14, "Tender is The Flesh", 3, "horror", 15);
+INSERT INTO bluebell_books VALUES (15, "Verity", 2, "suspence", 16);
+SELECT * FROM bluebell_books ORDER BY price; 
+SELECT SUM (quantity) FROM bluebell_books;
+
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the total sum of inventory? 
+SELECT SUM (quantity) 
+FROM bluebell_books
+

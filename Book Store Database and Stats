@@ -17,13 +17,18 @@ INSERT INTO bluebell_books VALUES (14, "Tender is The Flesh", 3, "horror", 15);
 INSERT INTO bluebell_books VALUES (15, "Verity", 2, "suspence", 16);
 SELECT * FROM bluebell_books ORDER BY price; 
 SELECT SUM (quantity) FROM bluebell_books;
+SELECT * FROM bluebell_books WHERE price > 14 ORDER BY quantity;
 
 
 --display the database ordered by price. 
-SELECT * FROM store
+SELECT * FROM bluebell_books
 ORDER BY price desc; 
 
 --what is the total sum of inventory? 
 SELECT SUM (quantity) 
 FROM bluebell_books
 
+--what is the largest book inventory over 14 dollars?
+SELECT * FROM bluebell_books
+WHERE price > 14
+ORDER BY quantity
